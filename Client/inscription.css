@@ -1,0 +1,34 @@
+html{
+    background-color: violet;  
+}
+  
+form{
+    width: 500px;
+    margin: auto;
+    padding: 25px;
+    border: solid black;
+}
+  
+label, input{
+    display: block;
+    width: 200px;
+    float: left;
+    margin-bottom: 10px;
+    
+}
+  
+br{
+    clear: left;
+}
+  
+.bouton {
+    width: 200px;
+    
+}
+p{
+    text-align: center;
+    font-size: 35px;
+}
+#reinitialiser,#envoyer{
+    width: 250px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="acceuil.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="acceuil.css">
+        
+    </head>
+    <body>
+        <div class="overly-menu-mobile" onclick="closeMenu()"></div>
+        <div class="menu_haut">
+            <div class="header_logo">
+                <a href="#"><img src="logo.png" alt="img"></a>
+            </div>
+            <div class="menu_header">
+                <ul>
+                    <li><a href="favori.html">Favori</a></li>
+                    <li class="header_nav_menu_link">
+                        <a href="panier1.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="header_nav_menu_link">
+                        <a href="connexion.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </a>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+        <br><br><br><br><br>
+            <header class="header">
+            <nav class="header_nav" onclick="closeMenu()">
+                <ul class="header_nav_menu">
+                    <li class="header_nav_menu_link" id="vetement">
+                        <a href="#">Femme</a>
+                        
+                        <ul class="menu_deroulant_vetement">
+                            <li><a href="Vetement/pantalon.html">Pantalons</a></li>
+                            <li><a href="Vetement/short.html">Shorts</a></li>
+                            <li><a href="Vetement/chemise.html">Chemises</a></li>
+                            <li><a href="Vetement/blouse.html">Blouses</a></li>
+                            <li><a href="Vetement/pull.html">Pulls</a></li>
+                            <li><a href="Vetement/veste.html">Vestes</a></li>
+                            <li><a href="Vetement/robe.html">Robes</a></li>
+                            <li><a href="Vetement/jupe.html">Jupes</a></li>
+                            <li><a href="Vetement/accessoire.html">Accessoire</a></li>
+                        </ul>
+                    </li>
+                </ul>   
+                <form action="#" method="get">
+                    <input type="text" name="q" placeholder="Rechercher...">
+                    <button type="submit">Rechercher</button>
+                  </form>
+                 
+            </nav>
+            
+            <div class="header_burger" onclick="openMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>                  
+            </div>
+        </header>
+       
+        <script>
+            /* openMenu() et closeMenu() permet l'ouverture et la fermeture du menu de navigation
+               sur un écran mobile, de petite taille.*/
+            function openMenu(){
+                document.querySelector(".header_nav").classList.add("open");
+                document.querySelector(".overly-menu-mobile").classList.add("open");
+            }
+            function closeMenu(){
+                document.querySelector(".header_nav").classList.remove("open");
+                document.querySelector(".overly-menu-mobile").classList.remove("open");
+            }
+            let vetement=document.getElementById("vetement");
+            let menu=document.querySelector(".menu_deroulant_vetement");
+
+            /* Lorsque l'on survole ce bouton le menu déroulant s'affiche.*/
+            vetement.addEventListener("mouseenter",function(event){
+                event.preventDefault();
+                menu.classList.toggle("active");
+            });
+            let liens = document.querySelectorAll(".menu_deroulant_vetement a");
+
+
+            liens.forEach(function(lien){
+                lien.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    window.location.href = lien.href;
+                });
+            });
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,197 @@
+html{
+    background-color:violet;
+}
+.menu_haut{
+    background-color: violet;  
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+.menu_header{
+    position: absolute;
+    margin: 0;
+    right: 100px; 
+    width: 100px;
+    top: 0px;  
+}
+.header_logo img{
+    max-height: 100px;
+}
+.menu_header ul li:first-child a {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    font-family: cursive;
+  }
+.menu_header ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.menu_header ul li{   
+    text-align: right;  
+    background-color: violet;
+    list-style: none;
+    display: table-cell;
+    margin: 0 10px;
+}
+
+.header_burger{
+    margin-top: 20px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    color: black;
+}
+.header_nav_menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: cursive;
+    
+}
+
+.header_nav_menu_link {
+    margin-right: 3px;
+    margin-left: 0px;
+    top: 0;
+    left: 0;
+     
+}
+
+.header_nav_menu_link#vetement {
+    position: relative;   
+   
+}
+.header_nav_menu_link#vetement ul {
+    position: relative;
+    text-align: left;   
+    list-style: circle; 
+    left: 50px; 
+   
+}
+.header_nav_menu_link#vetement ul a  {
+    font-size: 15px;
+    margin: 0;
+    padding: 1px;
+    left: 10px;
+    right: 0;
+    position:relative;
+  
+}
+
+.header_nav_menu_link a{
+    top: 0;
+    left: 20px;
+    color: rgb(9, 13, 14);
+    text-decoration: none;
+    
+}
+
+.header_nav_menu_link#vetement ul a:hover{
+    font-size: 25px;
+    color: blue;
+}
+
+.menu_deroulant_vetement{
+    display:none;
+}
+.menu_deroulant_vetement.active{
+    display:block;
+}
+h2{
+    color: rgb(12, 13, 13);
+    text-align: center;
+    position: relative;
+    font-family: cursive;
+    text-decoration: underline wavy;
+    font-size: 47px;
+}
+
+.panier{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    color: black;
+}
+
+button{
+    padding: 5px;
+    background: rgb(255, 0, 106);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+select{
+    padding: 5px;
+    background: rgb(105, 95, 116);
+    border: 0vi;
+    cursor: pointer;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;  
+   
+}
+
+.grid-item img{
+    width: 250px;
+    
+}
+
+@media screen and (max-width: 600px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    h2{
+        display: none;
+    }
+    .header_nav_menu_link#vetement ul {
+        position: relative;   
+        list-style: none;      
+    }
+    .header_nav_menu_link#vetement ul a  {
+        font-size: 15px;   
+        align-items: center;
+        text-align: center;
+        position:relative;
+      
+    }
+    .header_nav_menu{
+       position: relative;
+       align-items: center;
+       text-align: center;
+       left: 150px;
+       
+    }
+    .header_nav_menu_link a{
+        text-align: center;
+        align-items: center;
+        color: rgb(11, 13, 13);
+        text-decoration:overline;   
+    }
+    .menu_deroulant_vetement {
+        align-items: center;
+        width: 88px;
+        border: 18px inset rgb(112, 112, 108);
+    }
+    .header_nav_menu_link#vetement ul a:hover{
+        font-size: 17px;
+        color: rgb(53, 53, 82);
+    }
+ 
+}

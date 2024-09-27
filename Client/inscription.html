@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head> 
+    <meta charset="UTF-8">
+    <script src="EXO1.js"></script>
+    <link rel="stylesheet" href="inscription.css">
+    <link rel="stylesheet" href="menu_haut.css">
+    <title>Formulaire d'inscription</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="inscription.js"></script>
+  
+   
+</head>
+<body>
+    <div class="menu_haut">
+        <div class="header_logo">
+            <a href="../acceuil.html"><img src="../logo.png" alt="img"></a>
+        </div>
+        
+    </div>
+    <br><br><br><br><br>
+    <h1>Inscription</h1>
+    <br>
+    <form> 
+      
+    <!----------------------- Etat Civil (Select )--------------------------->
+    <label>Etat civil</label>
+    <select name="etat" id="etat_civil">
+        <option >M.</option>
+        <option >Mme</option>
+    
+    </select>
+    
+
+    <!----------------------- Nom,Prenom,Nom Complet (input )--------------------->
+    <br>
+
+    <label>Nom </label>
+    <input type="text" id="nom">
+    <br>
+   
+    <label>Prenom </label>
+    <input type="text" id="prenom">
+    <br>
+
+    <label>Nom complet </label>
+    <input type="text" id="nom_complet" disabled> <!-- desactive le input -->
+    <br>
+
+    <!----------------------- Date de naissance (input type="date" )--------------------->
+    <label>Date de naissance </label>
+    <input type="date" id="date_de_naissance" name="date_de_naissance" value="mm/dd/yyyy" min="01/01/1923" max="01/01/2023">
+    <br>
+
+    <!----------------------- Mot de passe, Confirmation (input type="password" )--------------------->
+    <label for="mot_de_passe">Mot de passe </label>
+    <input type="password" id="mot_de_passe" name="mot_de_passe" minlength="8">
+    <br>
+
+    <label for="confirmer_mot_de_passe">Confirmer le mot de passe </label>
+    <input type="password" id="confirmer_mot_de_passe" name="confirmer_mot_de_passe" minlength="8">
+    <br>
+
+    <!----------------------- Afficher Mot de passe (input type="checkbox" )--------------------->
+    <input type="checkbox" id="afficher_mot_de_passe">
+    <label> afficher le mot de passe</label>
+    <br> 
+
+
+    <!----------------------- Boutton Reinitialiser,Envoyer (type="reset", "submit")--------------------->
+    <input type="reset" id="reinitialiser"value="Reinitialiser">
+    <input type="submit" id="envoyer" value="Envoyer !">
+</div>
+</form>
+   
+ 
+</body>
+</html>
